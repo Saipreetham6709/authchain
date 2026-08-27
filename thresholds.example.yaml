@@ -1,0 +1,20 @@
+# Example threshold overrides for `authchain analyze --config thresholds.yaml`.
+# Any section/key you omit falls back to the built-in default in
+# authchain/config.py -- you don't need to repeat values you're not changing.
+
+brute_force:
+  min_failures: 5        # failed logins from the same (user, ip, host)...
+  window_seconds: 300    # ...within this many seconds to count as a burst
+
+breakthrough:
+  window_seconds: 120    # a success within this long after the burst counts as "it worked"
+
+privilege_escalation:
+  window_seconds: 600    # sudo usage within this long after a breakthrough gets linked to it
+
+lateral_movement:
+  window_seconds: 1800   # logins by the same user across hosts within this window are grouped
+  min_hosts: 2
+
+off_hours:
+  z_score_threshold: 2.5 # standard deviations from a user's baseline login hour before flagging

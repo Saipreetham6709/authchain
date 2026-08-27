@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+*.log.bak
+authchain_report.json
+authchain_report.html
+.pytest_cache/
+.DS_Store

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authchain"
+version = "0.1.0"
+description = "Authentication log correlation and attack-chain reconstruction engine"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "click>=8.0",
+    "PyYAML>=6.0",
+    "Jinja2>=3.0",
+]
+
+[project.scripts]
+authchain = "authchain.cli:main"
+
+[tool.setuptools]
+packages = ["authchain", "authchain.parsers"]
+
+[tool.setuptools.package-data]
+authchain = ["templates/*.j2"]

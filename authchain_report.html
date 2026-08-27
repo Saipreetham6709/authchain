@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AuthChain Incident Report</title>
+<style>
+  :root {
+    --critical: #d1273b; --high: #e2622a; --medium: #d9a520; --low: #4a7fbf;
+    --bg: #0f1115; --panel: #171a21; --border: #2a2f3a; --text: #dfe3ea; --muted: #8b93a3;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 32px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .summary { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+  .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; min-width: 110px; }
+  .stat .n { font-size: 24px; font-weight: 700; }
+  .stat .l { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .stat.critical .n { color: var(--critical); }
+  .stat.high .n { color: var(--high); }
+  .stat.medium .n { color: var(--medium); }
+  .stat.low .n { color: var(--low); }
+  .incident { background: var(--panel); border: 1px solid var(--border); border-left: 4px solid var(--muted);
+              border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+  .incident.critical { border-left-color: var(--critical); }
+  .incident.high { border-left-color: var(--high); }
+  .incident.medium { border-left-color: var(--medium); }
+  .incident.low { border-left-color: var(--low); }
+  .incident-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+  .incident-title { font-size: 15px; font-weight: 600; }
+  .badge { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 2px 8px; border-radius: 999px; font-weight: 700; }
+  .badge.critical { background: var(--critical); color: #fff; }
+  .badge.high { background: var(--high); color: #fff; }
+  .badge.medium { background: var(--medium); color: #1a1400; }
+  .badge.low { background: var(--low); color: #fff; }
+  .incident-meta { color: var(--muted); font-size: 12px; margin: 6px 0 12px; }
+  .tag { display: inline-block; font-size: 11px; background: #232833; color: var(--muted); border-radius: 5px; padding: 2px 7px; margin-right: 6px; }
+  ol.stages { margin: 10px 0 0; padding-left: 20px; font-size: 13px; }
+  ol.stages li { margin-bottom: 5px; color: #c9cedb; }
+  .empty { color: var(--muted); font-style: italic; padding: 24px; text-align: center; border: 1px dashed var(--border); border-radius: 8px; }
+</style>
+</head>
+<body>
+  <h1>AuthChain Incident Report</h1>
+  <div class="meta">Generated 2026-08-27T13:17:23 &middot; 19 events parsed &middot; 1 incident(s)</div>
+
+  <div class="summary">
+    <div class="stat critical"><div class="n">0</div><div class="l">Critical</div></div>
+    <div class="stat high"><div class="n">0</div><div class="l">High</div></div>
+    <div class="stat medium"><div class="n">1</div><div class="l">Medium</div></div>
+    <div class="stat low"><div class="n">0</div><div class="l">Low</div></div>
+  </div>
+
+  
+    
+    <div class="incident medium">
+      <div class="incident-head">
+        <div class="incident-title">INC-0001 &middot; Brute force attempt against 'baduser' on sri</div>
+        <span class="badge medium">medium</span>
+      </div>
+      <div class="incident-meta">
+        2026-08-27 12:45:41.505362 &rarr; 2026-08-27 12:48:34.547609
+        &middot; user: <strong>baduser</strong>
+         &middot; source: ::1
+        &middot; hosts: sri
+      </div>
+      <div>
+        <span class="tag">brute_force</span>
+      </div>
+      <ol class="stages">
+        <li>Brute force burst against 'baduser' from ::1 on sri (11 event(s) from 2026-08-27 12:45:41.505362 to 2026-08-27 12:48:34.547609)</li>
+      </ol>
+    </div>
+    
+  
+</body>
+</html>
