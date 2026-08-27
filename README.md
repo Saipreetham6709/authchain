@@ -34,7 +34,7 @@ writeup, including the limitations I chose not to hide.
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/authchain.git
+git clone https://github.com/Saipreetham6709/authchain.git
 cd authchain
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
